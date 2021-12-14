@@ -30,13 +30,14 @@ int main() {
             break;
         case 4: 
             printf("\nVoce selecionou o Guerreiro.\n");
+            break;
         default:
             printf("\nVoce nao selecionou nenhum personagem.\n");
     }  
     printf("\n-----------------------------------------------\n");
 
     // Comeco da historia
-    printf("Bem-vendo %c\n", nome);
+    printf("Bem-vendo %s\n", nome);
 
     int caminhos;
     printf("Vamos comecar a sua aventura, voce tem 3 caminhos a percorrer.\n");
@@ -74,6 +75,6 @@ int main() {
     if (escolha == "lutar" ||  escolha == "Lutar" || escolha == "LUTAR") {
         printf("Voce vai para cima do ogro");
     }
-    
+
     return 0;
 } 
