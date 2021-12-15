@@ -46,7 +46,9 @@ int main() {
     printf("\n1 - Oceano de Delfin / 2 - Floresta densa de Orlof / 3 - Deserto de Thalis\n");
     scanf("%d", &caminhos);
     char caminhoSelecionado[100];
-
+    
+    // Escolha dos caminhos, para seguir a aventura
+    
     switch (caminhos){
         case 1:
             printf("Entao voce ira para o Oceano de Delfin.\nEntao, que a aventura comece.\n");
@@ -78,7 +80,7 @@ int main() {
         int dano;
         int vidaOgro = 50, danoOgro;
 
-        // COMEÇO DA LUTA 
+        // Começo do mecanismo de luta 
         while(vidaOgro <= 0 || vida <= 0) {
             dano = rand() % 10;
             danoOgro = rand() % 10;
