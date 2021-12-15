@@ -5,7 +5,8 @@ int main() {
     // Variaveis
     int personagem; 
     char nome[30];
-    
+    int vida = 100;    
+
     printf("\n-----------------------------------------------\n");
     
     // Inicio
@@ -73,8 +74,30 @@ int main() {
     scanf("%s", &escolha);
 
     if (escolha == "lutar" ||  escolha == "Lutar" || escolha == "LUTAR") {
-        printf("Voce vai para cima do ogro");
-    }
+        printf("Voce vai para cima do ogro\n");
+        int dano;
+        int vidaOgro = 50, danoOgro;
+
+        // COMEÇO DA LUTA 
+        while(vidaOgro <= 0 || vida <= 0) {
+            dano = rand() % 10;
+            danoOgro = rand() % 10;
+
+            printf("Você dá %d de dano\n", dano);
+            printf("O dano do ogro eh de %d\n", danoOgro);
+            
+            vida -= danoOgro;
+            vidaOgro -= dano;
+        }
+
+        printf("\nFinal da batalha!!!\n");
+
+        if(vidaOgro <=0) {
+            printf("Parabens voce derrotou o Ogro targon\n");
+        } else {
+            printf("Voce morreu, acontece!!!");
+        }
+    } 
 
     return 0;
 } 
