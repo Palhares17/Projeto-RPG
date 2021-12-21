@@ -67,12 +67,12 @@ int main() {
     printf("\n-----------------------------------------------\n");
     printf("\n-> Capitulo 1\n");
 
-    Printf("Voce entrou no %s.\n", caminhoSelecionado);
+    printf("Voce entrou no %s.\n", caminhoSelecionado);
     printf("Cuidado voce entrou no covil do Ogro targon.");
     printf("Voce vai lutar ou correr ?");
     scanf("%s", escolha);
 
-    if (strcmp(escolha, "Lutar") == 0 || strcmp(escolha, "lutar") == 0) {
+    if(strcmp(escolha, "Lutar") == 0 || strcmp(escolha, "lutar") == 0) {
         printf("Voce vai para cima do ogro\n");
         int dano;
         int vidaOgro = 50, danoOgro;
