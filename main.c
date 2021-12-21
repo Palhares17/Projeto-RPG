@@ -11,8 +11,7 @@ int main() {
     
     // Inicio
     printf("Qual eh seu nome bravo aventureiro.\n");
-    scanf("%c", &nome);
-
+    scanf("%s", nome);
 
     printf("\nEscolha seu personagem: ");
     printf("\n");
@@ -46,9 +45,7 @@ int main() {
     printf("\n1 - Oceano de Delfin / 2 - Floresta densa de Orlof / 3 - Deserto de Thalis\n");
     scanf("%d", &caminhos);
     char caminhoSelecionado[100];
-    
-    // Escolha dos caminhos, para seguir a aventura
-    
+
     switch (caminhos){
         case 1:
             printf("Entao voce ira para o Oceano de Delfin.\nEntao, que a aventura comece.\n");
@@ -73,14 +70,14 @@ int main() {
     Printf("Voce entrou no %s.\n", caminhoSelecionado);
     printf("Cuidado voce entrou no covil do Ogro targon.");
     printf("Voce vai lutar ou correr ?");
-    scanf("%s", &escolha);
+    scanf("%s", escolha);
 
-    if (escolha == "lutar" ||  escolha == "Lutar" || escolha == "LUTAR") {
+    if (strcmp(escolha, "Lutar") == 0 || strcmp(escolha, "lutar") == 0) {
         printf("Voce vai para cima do ogro\n");
         int dano;
         int vidaOgro = 50, danoOgro;
 
-        // Começo do mecanismo de luta 
+        // COMEÇO DA LUTA 
         while(vidaOgro <= 0 || vida <= 0) {
             dano = rand() % 10;
             danoOgro = rand() % 10;
